@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Apply Inter font globally */
+    background-color: #080c11;
+    /* Dark background, similar to GitHub's dark theme */
+    color: #c9d1d9;
+    /* Light text for readability on dark background */
+    scroll-behavior: smooth;
+    /* Smooth scrolling for navigation links */
+    line-height: 1.6;
+    /* Improve readability of body text */
+}
+
+/* Section Heading Styling */
+.section-heading {
+    position: relative;
+    /* For the underline effect */
+    display: inline-block;
+    /* To make the underline only as wide as the text */
+    margin-bottom: 2.5rem;
+    /* Space below heading */
+    font-size: 2.8rem;
+    /* Larger heading for impact */
+    font-weight: 700;
+    /* Bold heading */
+    color: #58a6ff;
+    /* Accent color for headings */
+    padding-bottom: 0.5rem;
+    /* Space for the underline */
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    /* Center the underline */
+    transform: translateX(-50%);
+    /* Adjust for centering */
+    bottom: 0;
+    width: 80px;
+    /* Initial width of the underline */
+    height: 4px;
+    background-color: #58a6ff;
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+    /* Smooth transition for hover effect */
+}
+
+.section-heading:hover::after {
+    width: 120px;
+    /* Expand underline on hover */
+}
+
+/* Card Styling */
+.card {
+    background-color: #161b22;
+    /* Slightly lighter dark background for cards */
+    border: 1px solid #30363d;
+    /* Subtle border */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow for depth */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Smooth hover effects */
+    border-radius: 0.75rem;
+    /* More rounded corners for a softer look */
+    overflow: hidden;
+    /* Ensure content stays within rounded corners */
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    /* Lift card on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+    /* Deeper shadow on hover */
+}
+
+/* Custom Button Styles */
+.btn-custom-primary {
+    background-color: #58a6ff;
+    /* Primary accent color */
+    color: #0d1117;
+    /* Dark text for contrast */
+    padding: 0.85rem 1.8rem;
+    /* Generous padding */
+    border-radius: 0.6rem;
+    /* Rounded corners */
+    font-weight: 600;
+    /* Semi-bold text */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: none;
+    /* Remove default Bootstrap button border */
+    box-shadow: 0 4px 10px rgba(88, 166, 255, 0.3);
+    /* Subtle glow */
+}
+
+.btn-custom-primary:hover {
+    background-color: #79c0ff;
+    /* Lighter shade on hover */
+    transform: translateY(-3px);
+    /* Lift button on hover */
+    color: #0d1117;
+    /* Ensure text color remains dark */
+    box-shadow: 0 6px 15px rgba(88, 166, 255, 0.5);
+    /* Enhanced glow on hover */
+}
+
+.btn-custom-secondary {
+    background-color: #4a5568;
+    /* Darker gray for secondary button */
+    color: #ffffff;
+    /* White text */
+    padding: 0.85rem 1.8rem;
+    border-radius: 0.6rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    border: none;
+}
+
+.btn-custom-secondary:hover {
+    background-color: #64748b;
+    /* Lighter gray on hover */
+    transform: translateY(-3px);
+    color: #ffffff;
+}
+
+/* Navbar Link Styling */
+.nav-link-custom {
+    position: relative;
+    padding: 0.6rem 0;
+    /* Adjust padding for better look */
+    transition: color 0.3s ease-in-out;
+    color: #c9d1d9;
+    /* Light text for nav links */
+    font-weight: 500;
+    /* Medium weight for nav links */
+}
+
+.nav-link-custom:hover {
+    color: #58a6ff;
+    /* Accent color on hover */
+}
+
+.nav-link-custom::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    /* Initial width of the underline */
+    height: 2px;
+    background-color: #58a6ff;
+    transition: width 0.3s ease-in-out;
+    /* Smooth transition for underline */
+}
+
+.nav-link-custom:hover::after {
+    width: 100%;
+    /* Expand underline on hover */
+}
+
+/* Hero section specific styling */
+#home {
+    background: linear-gradient(135deg, #0d1117 0%, #1a202c 100%);
+    /* Subtle gradient background */
+}
+
+/* Project card specific styling */
+.project-img {
+    height: 250px;
+    /* Fixed height for project images */
+    object-fit: cover;
+    /* Ensure images cover the area without distortion */
+}
+
+/* Contact section link hover effect */
+.contact-link-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-link:hover .contact-link-icon {
+    transform: scale(1.1);
+    /* Slightly enlarge icon on hover */
+}
+
+.contact-link:hover {
+    color: #79c0ff !important;
+    /* Ensure hover color applies */
+}
+
+.list-items {
+    font-size: 30px;
+}
+
+.skills-heading {
+    font-size: 80px;
+}
+
+.form-container {
+
+    width: 33vw;
+    height: 30vh;
+    background-color: #0c042f2c;
+    border-color: #58a6ff;
+    border-width: 5px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 20px;
+    border-top: none;
+
+}
+
+.form-container:hover {
+    transform: translateY(-8px);
+    /* Lift card on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+    /* Deeper shadow on hover */
+}
+
+#label-container {
+    text-align: left;
+}
+
+.button-container {
+    margin-left: 6px;
+}
+
+
+
+
+
+
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Ensures padding doesn't increase width */
+}
+
+.form-group textarea {
+    resize: vertical;
+    /* Allow vertical resizing */
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#successMessage {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    text-align: center;
+    display: none;
+    /* Hidden by default */
+}
+
+#successMessage.hidden {
+    display: none;
+}
+
+#successMessage.visible {
+    display: block;
+}
